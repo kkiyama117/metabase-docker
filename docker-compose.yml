@@ -1,0 +1,12 @@
+version: "3.5"
+
+volumes:
+  metabase:
+
+services:
+  metabase:
+    build: .
+    volumes:
+      - metabase:/metabase.db.cached
+    ports:
+      - "80:3000"
